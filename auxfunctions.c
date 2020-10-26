@@ -31,3 +31,18 @@ void putstring(char *str, int *b)
 	}
 }
 
+/**
+ * _strlen - this function calculates the lenght of a string.
+ * @str: the string.
+ * Return: the lenght.
+ */
+int _strlen(char *str)
+{
+	int a;
+
+	for (a = 0; str[a]; a++)
+	{
+	}
+	return (a);
+}
+
