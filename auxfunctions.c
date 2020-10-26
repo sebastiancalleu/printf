@@ -36,7 +36,7 @@ void putstring(char *str, int *b)
  * @str: the string.
  * Return: the lenght.
  */
-int _strlen(char *str)
+int _strlen(const char *str)
 {
 	int a;
 
