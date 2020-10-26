@@ -33,9 +33,10 @@ int _printf(const char *format, ...)
 			case '%':
 				_printd(&a, &b);
 				break;
+			default:
+				putchar('%');
 			}
 		}
-
 	}
 	va_end(list);
 	return (b);
