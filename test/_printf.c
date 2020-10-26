@@ -1,25 +1,19 @@
 #include "holberton.h"
 /**
  * _printf - this function works like the printf function.
- * format - string to print.
+ * @format: string to print.
  * Return: character count.
  */
-int main(void)
-{
-	_printf("Char: [%c] another char: %c\n", 'd', 'j');
-	_printf("string : [%s]\n", "holamundo");
-	_printf("this is a \"string\" %s and this is a char %c and thats all\n", "prueba prueba", 'x');
-	_printf("holi %%c\n", 's');
-	return (0);
-}
 int _printf(const char *format, ...)
 {
 	int a, b = 0;
+
 	va_list(list);
+
 	va_start(list, format);
 	for (a = 0; format[a] != '\0'; a++)
 	{
-		if(format[a] != '%')
+		if (format[a] != '%')
 		{
 			_putchar(format[a]);
 			b++;
