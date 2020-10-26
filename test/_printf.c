@@ -6,29 +6,29 @@
  */
 int main(void)
 {
-	_printf("String:[%s]\n");
+	_printf("Char: [%c] another char: %c\n", 'd', 'j');
 	return (0);
 }
-int _printf(const char *format)
+int _printf(const char *format, ...)
 {
-	int a, b; /* contador de caracteres */
-	char *str;
+	int a; /* contador de caracteres */
+	va_list(list);
+	va_start(list, format);
 	for (a = 0; format[a] != '\0'; a++)
 	{
-	}
-	str = malloc(sizeof(char) * a);
-	for (b = 0; format[b] != '\0'; b++)
-	{
-		str[b] = format[b];
-	}
-	for (b = 0; str[b]; b++)
-	{
-		if (str[b - 1] == '%')
+		if(format[a] != '%')
+			putchar(format[a]);
+		else
 		{
-			str[b] = 'h';
+			switch (format[a + 1])
+			{
+			case 'c':
+				putchar((char) va_arg(list, int));
+				a++;
+			}
 		}
+
 	}
-	write(1, str, a);
-	free(str);
+	va_end(list);
 	return (a);
 }
