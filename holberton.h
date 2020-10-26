@@ -9,5 +9,6 @@ int _printf(const char *, ...);
 int _putchar(char);
 void putstring(char *, int *);
 int _strlen(const char *);
+void printd(int *, int *);
 #endif
 

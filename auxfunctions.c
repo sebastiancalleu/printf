@@ -46,3 +46,15 @@ int _strlen(const char *str)
 	return (a);
 }
 
+/**
+ * printd - this function print %.
+ * @a: count pointer.
+ * @b: count pointer.
+ */
+void printd(int *a, int *b)
+{
+	_putchar('%');
+	*a = *a + 1;
+	*b = *b + 1;
+}
+
