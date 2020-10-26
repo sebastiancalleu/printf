@@ -19,7 +19,10 @@ int _putchar(char a)
 void putstring(char *str, int *b)
 {
 	int a;
-
+	if (str == NULL)
+	{
+		str = "(null)";
+	}
 	for (a = 0; str[a]; a++)
 	{
 		_putchar(str[a]);
