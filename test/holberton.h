@@ -1,5 +1,5 @@
-#ifndef __3_CALC_H__
-#define __3_CALC_H__
+#ifndef __HOLBERTON_H__
+#define __HOLBERTON_H__
 
 #include <stdio.h>
 #include <stdarg.h>
