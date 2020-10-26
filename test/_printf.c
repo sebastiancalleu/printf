@@ -7,6 +7,9 @@
 int main(void)
 {
 	_printf("Char: [%c] another char: %c\n", 'd', 'j');
+	_printf("string : [%s]\n", "holamundo");
+	_printf("this is a \"string\" %s and this is a char %c and thats all\n", "prueba prueba", 'x');
+	_printf("holi %%c\n", 's');
 	return (0);
 }
 int _printf(const char *format, ...)
@@ -18,7 +21,7 @@ int _printf(const char *format, ...)
 	{
 		if(format[a] != '%')
 		{
-			putchar(format[a]);
+			_putchar(format[a]);
 			b++;
 		}
 		else
@@ -26,11 +29,19 @@ int _printf(const char *format, ...)
 			switch (format[a + 1])
 			{
 			case 'c':
-				putchar((char) va_arg(list, int));
+				_putchar((char) va_arg(list, int));
 				a++;
 				b++;
+				break;
 			case 's':
 				putstring(va_arg(list, char *), &b);
+				a++;
+				break;
+			case '%':
+				_putchar('%');
+				b++;
+				a++;
+				break;
 			}
 		}
 
