@@ -19,6 +19,7 @@ int _putchar(char a)
 void putstring(char *str, int *b)
 {
 	int a;
+
 	if (str == NULL)
 	{
 		str = "(null)";
