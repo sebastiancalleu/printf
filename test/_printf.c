@@ -11,13 +11,16 @@ int main(void)
 }
 int _printf(const char *format, ...)
 {
-	int a; /* contador de caracteres */
+	int a, b = 0;
 	va_list(list);
 	va_start(list, format);
 	for (a = 0; format[a] != '\0'; a++)
 	{
 		if(format[a] != '%')
+		{
 			putchar(format[a]);
+			b++;
+		}
 		else
 		{
 			switch (format[a + 1])
@@ -25,10 +28,14 @@ int _printf(const char *format, ...)
 			case 'c':
 				putchar((char) va_arg(list, int));
 				a++;
+				b++;
+			case 's':
+				putstring(va_arg(list, char *), &b);
 			}
 		}
 
 	}
+	printf("%d\n", b);
 	va_end(list);
-	return (a);
+	return (b);
 }
