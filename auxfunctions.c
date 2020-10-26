@@ -58,3 +58,14 @@ void _printd(int *a, int *b)
 	*b = *b + 1;
 }
 
+/**
+ * _putcharp - this function prints a character plus adding to counters.
+ * @a: count pointer.
+ * @b: count pointer.
+ */
+void _putcharp(char c, int *a, int *b)
+{
+	_putchar(c);
+	*a = *a + 1;
+	*b = *b + 1;
+}

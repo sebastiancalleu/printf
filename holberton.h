@@ -10,5 +10,6 @@ int _putchar(char);
 void putstring(char *, int *);
 int _strlen(const char *);
 void _printd(int *, int *);
+void _putcharp(char, int *, int *);
 #endif
 

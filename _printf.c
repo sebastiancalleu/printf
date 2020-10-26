@@ -25,9 +25,7 @@ int _printf(const char *format, ...)
 			switch (format[a + 1])
 			{
 			case 'c':
-				_putchar((char) va_arg(list, int));
-				a++;
-				b++;
+				_putcharp((char) va_arg(list, int), &a, &b);
 				break;
 			case 's':
 				putstring(va_arg(list, char *), &b);
