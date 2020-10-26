@@ -27,10 +27,19 @@ int _printf(const char *format, ...)
 				a++;
 				b++;
 				break;
+			case 's':
+				putstring(va_arg(list, char *), &b);
+				a++;
+				break;
+			case '%':
+				_putchar('%');
+				b++;
+				a++;
+				break;
 			}
 		}
 
 	}
 	va_end(list);
-	return (a);
+	return (b);
 }
