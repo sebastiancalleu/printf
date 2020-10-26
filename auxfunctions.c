@@ -47,7 +47,7 @@ int _strlen(const char *str)
 }
 
 /**
- * printd - this function print %.
+ * _printd - this function print %.
  * @a: count pointer.
  * @b: count pointer.
  */
