@@ -28,8 +28,7 @@ int _printf(const char *format, ...)
 				_putcharp((char) va_arg(list, int), &a, &b);
 				break;
 			case 's':
-				putstring(va_arg(list, char *), &b);
-				a++;
+				putstring(va_arg(list, char *), &b, &a);
 				break;
 			case '%':
 				_printd(&a, &b);

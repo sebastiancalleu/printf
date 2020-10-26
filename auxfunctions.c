@@ -15,8 +15,9 @@ int _putchar(char a)
  * putstring - this function prints a string.
  * @str: this is the string.
  * @b: this is the character counter.
+ * @a: counter pointer.
  */
-void putstring(char *str, int *b)
+void putstring(char *str, int *b, int *a)
 {
 	int a;
 
@@ -29,6 +30,7 @@ void putstring(char *str, int *b)
 		_putchar(str[a]);
 		*b = *b + 1;
 	}
+	*a = *a + 1;
 }
 
 /**
@@ -62,6 +64,7 @@ void _printd(int *a, int *b)
  * _putcharp - this function prints a character plus adding to counters.
  * @a: count pointer.
  * @b: count pointer.
+ * @c: this is the char.
  */
 void _putcharp(char c, int *a, int *b)
 {
