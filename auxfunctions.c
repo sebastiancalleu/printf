@@ -51,7 +51,7 @@ int _strlen(const char *str)
  * @a: count pointer.
  * @b: count pointer.
  */
-void printd(int *a, int *b)
+void _printd(int *a, int *b)
 {
 	_putchar('%');
 	*a = *a + 1;
