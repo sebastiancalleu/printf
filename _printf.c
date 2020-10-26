@@ -34,7 +34,7 @@ int _printf(const char *format, ...)
 				_printd(&a, &b);
 				break;
 			default:
-				putchar('%');
+				_putchar('%');
 				b++;
 				break;
 			}
