@@ -19,15 +19,15 @@ int _putchar(char a)
  */
 void putstring(char *str, int *b, int *a)
 {
-	int a;
+	int c;
 
 	if (str == NULL)
 	{
 		str = "(null)";
 	}
-	for (a = 0; str[a]; a++)
+	for (c = 0; str[c]; c++)
 	{
-		_putchar(str[a]);
+		_putchar(str[c]);
 		*b = *b + 1;
 	}
 	*a = *a + 1;
