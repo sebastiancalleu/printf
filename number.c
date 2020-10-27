@@ -6,8 +6,13 @@
  */
 void _number(int a, int *b)
 {
-	int c;
+	int c, d;
 
+	if (a == INT_MIN)
+	{
+		a = a / 10;
+		d = 1;
+	}
 	if (a < 0)
 	{
 		c = -a;
@@ -24,6 +29,10 @@ void _number(int a, int *b)
 		_number(c / 10, b);
 	}
 	_putchar(c % 10 + '0');
+	if (d == 1)
+	{
+		_putchar('8');
+	}
 	*b = *b + 1;
 }
 /**
