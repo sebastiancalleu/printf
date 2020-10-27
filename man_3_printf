@@ -9,7 +9,7 @@ _printf ARGUMENT(s)...
 .SH DESCRIPTION
 Print ARGUMENT(s) according to FORMAT or print a string.
 .SH OPTIONS
-The nuseradd does not take any options. However, you can supply username.
+At the momment, _printf does not take any options.
 .SH SEE ALSO
 Nothign else.
 .SH BUGS
