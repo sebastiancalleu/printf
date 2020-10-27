@@ -31,6 +31,10 @@ int _printf(const char *format, ...)
 				putstring(va_arg(list, char *), &b, &a);
 				break;
 			case 'i':
+			case 'd':
+				_number(va_arg(list, int), &b);
+				a++;
+				break;
 			case '%':
 				_printd(&a, &b);
 				break;
