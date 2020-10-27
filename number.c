@@ -9,7 +9,7 @@ void _number(int a, int *b)
 {
 	int c, d = 0;
 
-	if(a == INT_MIN)
+	if (a == INT_MIN)
 	{
 		a = a + 1;
 		d = 1;
