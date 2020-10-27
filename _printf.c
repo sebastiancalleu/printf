@@ -1,4 +1,5 @@
 #include "holberton.h"
+
 /**
  * _printf - this function works like the printf function.
  * @format: string to print.
@@ -17,7 +18,7 @@ int _printf(const char *format, ...)
 	{
 		if (format[a] != '%')
 		{
-			_putchar(format[a]);
+			_putchars(format[a], &b);
 		}
 		else
 		{
@@ -37,6 +38,7 @@ int _printf(const char *format, ...)
 			case '%':
 				_printd(&a, &b);
 				break;
+
 			default:
 				_putchars('\%', &b);
 				break;
