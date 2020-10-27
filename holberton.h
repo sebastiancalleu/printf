@@ -15,4 +15,3 @@ void _number(int, int *);
 int _putchars(char, int *);
 
 #endif
-
