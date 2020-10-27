@@ -39,8 +39,7 @@ int _printf(const char *format, ...)
 				_printd(&a, &b);
 				break;
 			default:
-				_putchar('%');
-				b++;
+				_putchars('\%', &b);
 				break;
 			}
 		}
