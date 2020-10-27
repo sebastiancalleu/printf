@@ -1,5 +1,4 @@
 #include "holberton.h"
-
 /**
  * _printf - this function works like the printf function.
  * @format: string to print.
@@ -40,7 +39,7 @@ int _printf(const char *format, ...)
 				break;
 
 			default:
-				_putchars('\%', &b);
+				_putchars('%', &b);
 				break;
 			}
 		}
