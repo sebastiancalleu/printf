@@ -1,5 +1,4 @@
 #include "holberton.h"
-#include <stdio.h>
 /**
  * _number - this function prints numbers.
  * @a: is the number.
