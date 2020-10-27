@@ -8,6 +8,17 @@ _printf FORMAT [ARGUMENT]...
 _printf ARGUMENT(s)...
 .SH DESCRIPTION
 Print ARGUMENT(s) according to FORMAT or print a string.
+
+ FORMAT controls the output as in C printf.  Interpreted sequences are:
+
+	%%		print a single %
+
+	%c		ARGUMENT is printed a char.
+
+	%s		ARGUMENT is printed as string.
+
+	%d		ARGUMENT is printed as integer.
+
 .SH OPTIONS
 At the momment, _printf does not take any options.
 .SH SEE ALSO
