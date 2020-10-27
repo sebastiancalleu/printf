@@ -29,11 +29,13 @@ void _number(int a, int *b)
 		_number(c / 10, b);
 	}
 	_putchar(c % 10 + '0');
+	*b = *b + 1;
 	if (d == 1)
 	{
 		_putchar('8');
+		*b = *b + 1;
 	}
-	*b = *b + 1;
+
 }
 /**
  * _putchars - this function prints characters
