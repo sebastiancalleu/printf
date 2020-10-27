@@ -1,4 +1,5 @@
 #include "holberton.h"
+#include <limits.h>
 /**
  * _number - this function prints numbers.
  * @a: is the number.
@@ -6,8 +7,13 @@
  */
 void _number(int a, int *b)
 {
-	int c;
+	int c, d = 0;
 
+	if(a == INT_MIN)
+	{
+		a = a + 1;
+		d = 1;
+	}
 	if (a < 0)
 	{
 		c = -a;
@@ -16,6 +22,8 @@ void _number(int a, int *b)
 	}
 	else
 		c = a;
+	if (d == 1)
+		_putchar('8');
 	if (c / 10)
 	{
 		_number(c / 10, b);
