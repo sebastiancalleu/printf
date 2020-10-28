@@ -6,12 +6,26 @@
  */
 void _printbi(int a, int *b)
 {
-	int c[1000], d, e;
+	int c[1000], d, e, f;
 
-	for (d = 0; a > 0; d++)
+	if (a == 0)
 	{
-		c[d] = a % 2;
-		a = a / 2;
+		_putchar ('0');
+			*b = *b + 1;
+	}
+	if (a < 0)
+	{
+		_putchar('-');
+		f = -a;
+	}
+	else
+	{
+		f = a;
+	}
+	for (d = 0; f > 0; d++)
+	{
+		c[d] = f % 2;
+		f = f / 2;
 	}
 	e = d - 1;
 	for (d = e; d >= 0; d--)
