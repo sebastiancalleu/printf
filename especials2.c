@@ -73,3 +73,22 @@ void printrod13(char *str, int *b)
 	}
 	free(s);
 }
+
+/**
+ * _reversed_string - prints a string in reverse.
+ * @s: the address of memory to print
+ * @b: the counter.
+ */
+void _reversed_string(char *s, int *b)
+{
+	if (!*s)
+	{
+		return;
+	}
+	else
+	{
+		_reversed_string((s + 1), b);
+		_putchar(*s);
+		*b = *b + 1;
+	}
+}
